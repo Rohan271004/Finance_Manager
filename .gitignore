@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Django
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+*.env
+
+# VSCode settings
+.vscode/
+
+# Byte-compiled / cache
+*.py[cod]
+__pycache__/
+*.so
+
+# Static and media files
+/staticfiles/
+/media/
+
+# Migrations (optional)
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
