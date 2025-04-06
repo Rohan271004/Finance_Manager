@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-3">
+    <h5>Preferred currency</h5>
+    {% include 'partials/_messages.html' %}
+    <form action="{% url 'preferences' %}" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="input-group">
+                <select name="currency" class="form-select" id="inputGroupSelect04" aria-label="Currency selection">
+                    {% for currency in currencies %}
+                        <option value="{{ currency.value }}" {% if currency.value == selected_currency %}selected{% endif %}>
+                            {{ currency.name }} - {{ currency.value }}
+                        </option>
+                    {% endfor %}
+                </select>
+                
+                
+                <input class="btn btn-outline-secondary" type="submit" value="Submit" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<hr>
+
+{% endblock content %}
